@@ -1,3 +1,6 @@
+[build]
+  publish = "public"
+
 [functions]
   node_bundler = "esbuild"
 
@@ -6,7 +9,6 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
-# Daily 12:00 UTC (adjust for your local 7am if needed)
 [[scheduled.functions]]
   path = "morning-brief"
   cron = "0 12 * * *"
